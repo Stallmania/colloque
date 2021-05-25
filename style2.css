@@ -1,0 +1,30 @@
+
+@media screen and (max-width:850px) {
+
+    .cercleClosed{
+        background-color: rgb(0, 26, 255);
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: all 3s; 
+    }
+    .cercleOpen{
+        transform: translate(-50%,-50%) scale(100);;
+        transition: all 3s;
+    }
+    .menuClosed{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+    }
+    .menuOpen{
+        transform:translate(-50%,-50%)  scale(1);
+        opacity: 1;
+        transition: all 1s;
+    }    
+}

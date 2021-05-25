@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="src/css/style.css">
     <title>Colloque 2021</title>
     <script src="src/js/countDown.js" defer></script>
+    <script src="src/js/toggle.js" defer></script>
 </head>
 <body>
     <header>
         <video id="videosBG" poster="src/images/poster.jpg" autoplay muted loop>
             <source src="src/videos/backroundVideo.mp4" type="video/mp4">
         </video>
-        <div class="overlay"></div>
         <nav>
             <div class="left">
                 <a href="#"><img src="src/images/logo_2.png" alt="logo"></a>
             </div>
             <div class="right">
-                <a href="#"><h1>Reservation</h1></a>
-                <a href="#"><h1>Colloques</h1></a>
-                <a href="#"><h1>Nous-Contacter</h1></a>
+                <a href="www.google.fr">Reservation</a>
+                <a href="yahoo.fr">Colloques</a>
+                <a href="#">Nous-Contacter</a>
             </div>
             <div class="burger">
                 <span></span>
             </div>
+            <div class="closed-cercle"></div>
         </nav>
         <div class="bottom-border"></div>
         <div class="titlesAndTime">
-            <span>13<sup>ème</sup> Colloque</span>
-            <h4>2 OCTOBRE 2021 – PALAIS DES CONGRÈS, ARCACHON</h4>
-            <h2>LES FACETTES DE L'ÉTHIQUE DU MJPM</h2>
-            <p>Questionnement ou évolution entre présent et avenir</p>
+            <div class="titles">
+                <span>13<sup>ème</sup> Colloque</span>
+                <h3>2 OCTOBRE 2021 – PALAIS DES CONGRÈS, ARCACHON</h3>
+                <h1>LES FACETTES DE L'ÉTHIQUE DU MJPM</h1>
+                <h1>Questionnement ou évolution entre présent et avenir</h1>
+            </div>
             <table>
                 <tr class="numbers" id="countdown" data-time="2021-10-02T08:30:24+0000">
                     <th id="days"></th>
@@ -48,6 +51,11 @@
                     <td>Secondes</td>
                 </tr>
             </table>
+            <div class="callToAction">
+                <a href="www.google.fr" class="callToActionRegister">Réserver Maintenant</a>
+                <a href="www.google.fr" class="callToActionRead">En savoir plus</a>
+            </div>
+            
         </div>
     </header>
     <menu>

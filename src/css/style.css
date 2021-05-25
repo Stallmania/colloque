@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 header {
   position: relative;
   background: rgba(1, 19, 179, 0.432);
@@ -5,6 +6,9 @@ header {
   overflow: hidden;
   min-height: 100vh;
   font-family: Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 header video {
@@ -19,19 +23,11 @@ header video {
 
 header nav {
   padding: 0 5%;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 7px;
+  font-size: .8rem;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 850px) {
-  header nav {
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.589);
-  }
 }
 
 header nav .left {
@@ -40,6 +36,12 @@ header nav .left {
 
 header nav .left img {
   width: 150px;
+}
+
+@media screen and (max-width: 850px) {
+  header nav .left {
+    flex: 0 0 90%;
+  }
 }
 
 header nav .right {
@@ -55,45 +57,80 @@ header nav .right a {
 
 @media screen and (max-width: 850px) {
   header nav .right {
-    display: none;
+    position: absolute;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-end;
+    left: 50%;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    transform: translate(-50%, -50%) scale(0);
   }
 }
 
-header nav .burger {
-  position: relative;
-  width: 42px;
-  height: 30px;
-  cursor: pointer;
-  margin: 0 5%;
+@media screen and (max-width: 850px) {
+  header nav .displayMenu {
+    transition: all .4s ease;
+  }
 }
 
-header nav .burger span {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: black;
-  top: 50%;
-  transform: translateY(-50%);
+@media screen and (max-width: 850px) {
+  header nav .open-menu {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .4s;
+    z-index: 2;
+  }
 }
 
-header nav .burger span::before, header nav .burger span::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  background-color: black;
-}
-
-header nav .burger span::before {
-  transform: translateY(-14px);
-}
-
-header nav .burger span::after {
-  transform: translateY(14px);
+@media screen and (max-width: 850px) {
+  header nav .burger {
+    flex: 0 0 42px;
+    position: relative;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  header nav .burger span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header nav .burger span::before, header nav .burger span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  header nav .burger span::before {
+    transform: translateY(-14px);
+  }
+  header nav .burger span::after {
+    transform: translateY(14px);
+  }
+  header nav .closed-cercle {
+    background-color: rgba(24, 39, 51, 0.85);
+    width: 200vw;
+    height: 200vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  header nav .displayCercle {
+    transition: all .3s ease;
+  }
+  header nav .open-cercle {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .4s ease;
+    z-index: 1;
+  }
 }
 
 header .bottom-border {
@@ -104,34 +141,42 @@ header .bottom-border {
 }
 
 header .titlesAndTime {
-  color: white;
-  text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-header .titlesAndTime span {
+header .titlesAndTime .titles {
+  color: white;
+  text-align: center;
+}
+
+header .titlesAndTime .titles span {
   display: inline-block;
-  margin-bottom: 30px;
+  white-space: nowrap;
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 800;
+  font-family: sans-serif;
   text-transform: uppercase;
 }
 
-header .titlesAndTime span sup {
+header .titlesAndTime .titles span sup {
   font-size: 3rem;
   text-transform: lowercase;
 }
 
 @media screen and (max-width: 992px) {
-  header .titlesAndTime span {
+  header .titlesAndTime .titles span {
     font-size: 3rem;
   }
-  header .titlesAndTime span sup {
+  header .titlesAndTime .titles span sup {
     font-size: 2.5rem;
   }
+}
+
+header .titlesAndTime h3 {
+  margin-bottom: 50px;
 }
 
 header .titlesAndTime table {
@@ -143,24 +188,59 @@ header .titlesAndTime table tr th {
   font-size: 4.2rem;
   font-weight: 100;
   padding: 0 30px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (max-width: 992px) {
   header .titlesAndTime table tr th {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 }
 
 header .titlesAndTime table tr td {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (max-width: 992px) {
   header .titlesAndTime table tr td {
     font-size: 1rem;
   }
+}
+
+header .titlesAndTime .callToAction {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  text-align: center;
+}
+
+header .titlesAndTime .callToAction .callToActionRegister {
+  background-color: #0072bc;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header .titlesAndTime .callToAction .callToActionRegister:hover {
+  background-color: #0063a3;
+}
+
+header .titlesAndTime .callToAction .callToActionRead {
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header .titlesAndTime .callToAction .callToActionRead:hover {
+  color: #0072bc;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

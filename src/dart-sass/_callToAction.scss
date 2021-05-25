@@ -1,0 +1,10 @@
+@mixin CallToAction ($bg, $padding:1rem , $bradius:25px, $border: 2px solid white, $color:red, $fz: 1rem,$border:solid 1px blue,$fw:600) {
+    background-color: $bg;
+    padding: $padding;
+    border-radius: $bradius;
+    border:$border;
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+    text-decoration: none;
+}
