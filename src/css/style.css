@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 header {
   position: relative;
-  background: rgba(1, 19, 179, 0.432);
   color: white;
   overflow: hidden;
   min-height: 100vh;
@@ -242,5 +241,32 @@ header .titlesAndTime .callToAction .callToActionRead {
 header .titlesAndTime .callToAction .callToActionRead:hover {
   color: #0072bc;
   background-color: #ffffff;
+}
+
+main .flexA {
+  display: flex;
+}
+
+main .flexA p {
+  margin: 0;
+  padding: 100px;
+  text-align: justify;
+  font-size: 1.3rem;
+  background-color: whitesmoke;
+  font-family: Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main .flexA img {
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #a4d9ee;
+}
+
+.titleA, .titleB {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
