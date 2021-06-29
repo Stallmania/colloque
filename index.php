@@ -1,36 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/style.css">
-    <title>Colloque 2021</title>
-    <script src="src/js/countDown.js" defer></script>
-    <script src="src/js/toggle.js" defer></script>
-</head>
-<body>
+<?php require_once 'header.php' ?>
+<video id="videosBG" poster="src/images/poster.jpg" autoplay muted loop>
+    <source src="src/videos/backroundVideo.mp4" type="video/mp4">
+</video>
     <header>
-        <video id="videosBG" poster="src/images/poster.jpg" autoplay muted loop>
-            <source src="src/videos/backroundVideo.mp4" type="video/mp4">
-        </video>
-        <nav>
-            <div class="left">
-                <a href="#"><img src="src/images/logo_2.png" alt="logo"></a>
-            </div>
-            <div class="right">
-                <a href="inscription.php">Reservation</a>
-                <a href="#">Colloques</a>
-                <a href="intervenants.php">Intervenants</a>
-                <a href="#">Nous-Contacter</a>
-            </div>
-            <div class="burger">
-                <span></span>
-            </div>
-            <div class="closed-cercle"></div>
-        </nav>
-        <div class="bottom-border"></div>
         <div class="titlesAndTime">
             <div class="titles">
                 <span>13<sup>ème</sup> Colloque</span>
@@ -53,7 +25,7 @@
                 </tr>
             </table>
             <div class="callToAction">
-                <a href="inscription.php" class="callToActionRegister">Réserver Maintenant</a>
+                <a href="reservation.php" class="callToActionRegister">Réserver Maintenant</a>
                 <a href="#main" class="callToActionRead">En savoir plus</a>
             </div>
         </div>
