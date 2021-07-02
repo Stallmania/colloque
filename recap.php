@@ -15,6 +15,7 @@ var_dump($_POST);
                     <!-- Used to display form errors -->
             </div>
         </div>
+        <!-- <button>Submit Payment</button> -->
         <button>Submit Payment</button>
     </form>
 

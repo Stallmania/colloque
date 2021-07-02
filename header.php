@@ -8,10 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Colloque 2021</title>
-    <script src="src/js/countDown.js" defer></script>
-    <script src="src/js/toggle.js" defer></script>
 </head>
-<body onload="aff_BlockPhysique('oui');aff_BlockMoral('non');aff_cocktail('oui')">
+<body>
     <nav>
         <div class="left">
             <a href="index.php"><img src="src/images/logo_5.png" alt="logo"></a>

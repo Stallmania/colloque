@@ -2,22 +2,22 @@
 <main class="reservation">
     <h2 class="titleA">Bulletin de pré-inscription - Colloque AFFECT 2021</h2>
     <div class="container-fluid">
-        <form id="payment-form" action="./recap.php" method="post">
+        <form id="payment-form" action="./controllers/recap.php" method="post">
             <div class="civilite row g-3">
                 <div class="form-check col-md-1">
-                    <input class="form-check-input" type="radio" name="civilite" id="mme" value="mme" checked onchange="aff_BlockPhysique('oui');aff_BlockMoral('non')">
+                    <input class="form-check-input" type="radio" name="civilite" id="mme" value="mme" checked>
                     <label class="form-check-label" for="mme">
                         Mme
                     </label>
                 </div>
                 <div class="form-check col-md-1">
-                    <input class="form-check-input" type="radio" name="civilite" id="monsieur" value="monsieur" onchange="aff_BlockPhysique('oui');aff_BlockMoral('non')">
+                    <input class="form-check-input" type="radio" name="civilite" id="monsieur" value="monsieur">
                     <label class="form-check-label" for="monsieur">
                         M.
                     </label>
                 </div>
                 <div class="form-check col-md-10">
-                    <input class="form-check-input" type="radio" name="civilite" id="raison" value="Raison" onchange="aff_BlockPhysique('non');aff_BlockMoral('oui')">
+                    <input class="form-check-input" type="radio" name="civilite" id="raison" value="raison">
                     <label class="form-check-label" for="raison">
                         Raison sociale
                     </label>
@@ -27,26 +27,26 @@
                 <div class="col-md-12 blocks">
                     <div id="BlockPhysique" class="row g-3">
                         <div class="form-floating col-md-4">
-                            <input type="text" class="form-control" id="prenom" name="prenom" minlength="2" maxlength="30" placeholder="Prénom *" required>
+                            <input type="text" class="form-control" id="prenom" name="prenom" minlength="2" maxlength="50" placeholder="Prénom *" >
                             <label for="prenom" class="form-label">Prénom *</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" class="form-control" id="nom" name="nom" minlength="1" maxlength="30" placeholder="Nom *" required>
+                            <input type="text" class="form-control" id="nom" name="nom" minlength="1" maxlength="50" placeholder="Nom *" >
                             <label for="nom" class="form-label">Nom *</label>
                         </div>
                         <div class="form-floating col-md-4" style="overflow:hidden;">
-                            <input type="text" class="form-control" id="situation" name="situation" minlength="2" maxlength="100" placeholder="Situation Professionnelle *" required>
+                            <input type="text" class="form-control" id="situation" name="situation" minlength="2" maxlength="100" placeholder="Situation Professionnelle *"  >
                             <label for="situation" class="form-label"><span style="white-space: nowrap;">Situation Professionnelle *</span></label>
                         </div>
                     </div>
                     <div id="BlockMoral" class="row g-3">
                         <div class="form-floating col-md-8">
-                            <input type="text" class="form-control" id="raisons" name="raisons" minlength="1" maxlength="100" placeholder="entreprise, association..." required>
+                            <input type="text" class="form-control" id="raisons" name="raisons" minlength="1" maxlength="100" placeholder="entreprise, association..." >
                             <label for="raisons" class="form-label">entreprise, association...*</label>
                             <span id="more" style="background-color : red;"></span>
                         </div>
                         <div class="form-floating col-md-4" style="overflow:hidden;">
-                            <input type="number" class="form-control" id="nbPartic" name="nbPartic" minlength="1" maxlength="2" value="1" required>
+                            <input type="number" class="form-control" id="nbPartic" name="nbPartic" minlength="1" maxlength="2" value="1" >
                             <label for="nbPartic" class="form-label"><span style="white-space: nowrap;">Nombre de personnes à inscrire *</span></label>
                         </div>
                     </div>
@@ -54,23 +54,23 @@
                 <div class="col-md-12">
                     <div class="row g-3 adress">
                         <div class="form-floating col-md-6">
-                            <input type="email" class="form-control" id="email" name="email" minlength="5" maxlength="50"  aria-describedby="inputGroupPrepend2" placeholder="Email *" required>
+                            <input type="email" class="form-control" id="email" name="email" minlength="5" maxlength="50"  aria-describedby="inputGroupPrepend2" placeholder="Email *" >
                             <label for="email" class="form-label">Email *</label>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control" id="tel" name="tel" minlength="10" maxlength="14"  aria-describedby="inputGroupPrepend2" placeholder="Numéro de Téléphone *" required>
+                            <input type="text" class="form-control" id="tel" name="tel" minlength="10" maxlength="14"  aria-describedby="inputGroupPrepend2" placeholder="Numéro de Téléphone *" >
                             <label for="tel" class="form-label">Numéro de Téléphone *</label>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control" id="adress" name="adress" minlength="3" maxlength="100" placeholder="Adresse" required>
+                            <input type="text" class="form-control" id="adress" name="adress" minlength="3" maxlength="100" placeholder="Adresse" >
                             <label for="adress" class="form-label">Adresse *</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" class="form-control" id="city" name="ville" minlength="2" maxlength="50" placeholder="Ville" required>
+                            <input type="text" class="form-control" id="city" name="ville" minlength="2" maxlength="60" placeholder="Ville" >
                             <label for="city" class="form-label">Ville *</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" class="form-control" id="cp" name="cp" minlength="5" maxlength="5" placeholder="Code postal" required>
+                            <input type="text" class="form-control" id="cp" name="cp" minlength="5" maxlength="5" placeholder="Code postal" >
                             <label for="cp" class="form-label">Code postal *</label>
                         </div>
                     </div>
@@ -84,25 +84,25 @@
                 <div class="procucts row g-3">
                     <h1>Vous souhaitez participer au Colloque 2021</h1>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price" value="160" id="firstPrice" onchange="aff_cocktail('oui')">
+                        <input class="form-check-input" type="radio" name="price" value="160" id="firstPrice">
                         <label class="form-check-label" for="firstPrice">
                             Non Adhérent AFFECT (Cocktail de clôture non compris) - <strong>160 €</strong> 
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price" value="130" id="secondePrice" onchange="aff_cocktail('oui')">
+                        <input class="form-check-input" type="radio" name="price" value="130" id="secondePrice">
                         <label class="form-check-label" for="secondePrice">
                             Adhérent AFFECT (Cocktail de clôture non compris) - <strong>130 €</strong> 
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price" value="35" id="thirdPrice" onchange="aff_cocktail('non')">
+                        <input class="form-check-input" type="radio" name="price" value="35" id="thirdPrice">
                         <label class="form-check-label" for="thirdPrice">
                             Candidat AFFECT 2019-2020 (Cocktail de clôture compris) - <strong>35 €</strong> 
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="price" value="0" id="free" onchange="aff_cocktail('oui')">
+                        <input class="form-check-input" type="radio" name="price" value="0" id="free">
                         <label class="form-check-label" for="free">
                             Etudiant extérieur se rapprocher du secrétariat
                         </label>
@@ -155,16 +155,8 @@
                 <span class="badge bg-info" id="totalPrice"></span>
                 <span class="badge bg-info"> €</span>
             </h1>
-            <div id="card-element" class="form-control">
-                    <!-- a Stripe Element will be inserted here. -->
-            </div>
-                
-            <div id="card-errors" role="alert">
-                    <!-- Used to display form errors -->
-            </div>
-            <!-- <button>Submit Payment</button> -->
             <div class="d-grid col-md-3 mx-auto">
-                <button type="submit" class="btn btn-primary">passer au paiement</button>
+                <button type="submit" class="btn btn-primary" name="send">passer au paiement</button>
             </div>
         </form>
     </div>
@@ -173,10 +165,10 @@
 
 </footer>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./src/js/switch_form.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="src/js/countDown.js"></script>
+    <script src="src/js/toggle.js"></script>
+    <script src="./src/js/swi_bis.js"></script>
     <script src="./src/js/sum.js"></script>
-    <!-- <script src="https://js.stripe.com/v3/"></script>
-    <script src="./js/charge.js"></script> -->
 </body>
 </html>
