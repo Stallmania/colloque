@@ -1,6 +1,7 @@
 <?php
 require_once 'validateForm.php';
-require_once '../config/config.php';
+require_once 'validateLogic.php';
+require_once 'config/config.php';
 
 if (isset($_POST['send'])) {
     $civility = (isset($_POST['civilite'])?($_POST['civilite']):null);
@@ -17,63 +18,86 @@ if (isset($_POST['send'])) {
     $price = (isset($_POST['price'])?($_POST['price']):null);
     $optionnel = (isset($_POST['optionnel'])?($_POST['optionnel']):null);
 }
+else{
+    header('Location: reservation.php');
+}
 $allPosts = [$civility,$lastName,$firstName,$situation,$raisons,$nbPartic,$email,$tel,$adress,$city,$cp,$price,$optionnel];
 /********************************************************** */
 /*------consistency between civility and input fields---*/
 if (isset($_POST['send'])){
     if (($lastName || $firstName || $situation) && ($civility === 'raison')){
-        header('Location: ../reservation.php');
+        header('Location: reservation.php');
     }
     if (($raisons || $nbPartic) && (($civility === 'mme'|| $civility === 'monsieur'))){
-        header('Location: ../reservation.php');
+        header('Location: reservation.php');
     }
 }
 
-$requiredFielsPhysic = [$lastName,$firstName,$situation,$email,$tel,$adress,$city,$cp,$price];
-$requiredFielsLegal = [$raisons,$nbPartic,$email,$tel,$adress,$city,$cp,$price];
-
 
 /********************************************************** */
-/*-------Max and min char length authorized--------------------------*/
+/*-------Max and min char length authorized and validation for every field----------*/
 $valid = new validateForm();
 $valid->validatingNomberOfChar($lastName,2,50);
+$valid->validateName($lastName);
+
 $valid->validatingNomberOfChar($firstName,2,50);
+$valid->validateName($firstName);
+
 $valid->validatingNomberOfChar($situation,2,100);
+$valid->validateName($situation);
+
+$valid->validatingNomberOfChar($raisons,1,100);
+$valid->validateNameOfCompany($raisons);
+
 $valid->validatingNomberOfChar($nbPartic,1,2);
+
 $valid->validatingNomberOfChar($email,5,100);
+$valid->validateEmail($email);
+
 $valid->validatingNomberOfChar($tel,10,14);
+$valid->validatingPhone($tel);
+
 $valid->validatingNomberOfChar($adress,3,100);
+$valid->validateNameOfCompany($adress);
+
 $valid->validatingNomberOfChar($city,2,60);
+$valid->validateName($city);
+
 $valid->validatingNomberOfChar($cp,5,5);
+$valid->cp($cp);
 
 
 /********************************************************** */
 /*--------ensure that required fields are filled-----*/
-$valid->requiredRadio($civility, $civilities);
-$valid->requiredRadio($price, $required_prices);
+$logic = new validateLogic();
+$logic->requiredRadio($civility, $civilities);
+$logic->requiredRadio($price, $required_prices);
+
+
+$requiredFielsPhysic = [$lastName,$firstName,$situation,$email,$tel,$adress,$city,$cp,$price];
+$requiredFielsLegal = [$raisons,$nbPartic,$email,$tel,$adress,$city,$cp,$price];
 
 if ($civility === 'mme' || $civility === 'monsieur') {
-    $valid->fieldNotEmpty($requiredFielsPhysic);
+    $logic->fieldNotEmpty($requiredFielsPhysic);
 }
 
 if ($civility === 'raison') {
-    $valid->fieldNotEmpty($requiredFielsLegal);
+    $logic->fieldNotEmpty($requiredFielsLegal);
 }
 
-$nbParticipants =  $valid->numberOfparticipants($nbPartic);
+$nbParticipants =  $logic->numberOfparticipants($nbPartic);
 
 /********************************************************** */
 /********** validate and return the required price ****************** */
-$require_choise = $valid->validatePrice($price, $required_prices);
+$require_choise = $logic->validatePrice($price, $required_prices);
 
-var_dump($require_choise);
 
 /********************************************************** */
 /*----  validate and return liste of optional choises -----*/
 if (!empty($optionnel)) {
+    $optionnel_choisis = [];
     foreach($optionnel as $option){
-        $optionnel_choisis = $valid->validatePrice($option, $optional_prices);
-        var_dump($optionnel_choisis);
+        $optionnel_choisis[] = $logic->validatePrice($option, $optional_prices);
     }
 }else{
     $optionnel = [0];
@@ -82,5 +106,6 @@ if (!empty($optionnel)) {
 /**********************************/
 /******* sum ************* */
 $total = $nbParticipants * ($price + array_sum($optionnel));
-var_dump($total);
+
+
 

@@ -1,52 +1,44 @@
 <?php
-
 class validateForm
 {
-    protected $pageOfReservation = 'Location: ../reservation.php';
-
-    public function requiredRadio($radio, array $fields)
-    {
-        if (!in_array($radio ,$fields) || $radio === null) {
-            header($this->pageOfReservation);
-        }
-    }
-
-    public function fieldNotEmpty(array $fields)
-    {
-        if (in_array('',$fields)) {
-            header($this->pageOfReservation);
-        }
-    }
-
+    protected $pageOfReservation = 'Location: reservation.php';
+    protected $patternAutorized ='#^[\p{Latin}\' -]+$#u';
+    protected $patternForCompany ='#^[0-9\p{Latin}\' -.]+$#u';
+    protected $patternForCP = '#^[0-9]+$#';
+    
     public function validatingNomberOfChar($field,int $NbMinOfCharAutorized = 1, int $NbMaxOfCharAutorized = 50)
     {
         if (($field !== null) && ((strlen($field) < $NbMinOfCharAutorized) || (strlen($field) > $NbMaxOfCharAutorized))) {
             header($this->pageOfReservation);
         }
     }
-
-    public function numberOfparticipants($nb)
-    {
-        if (!is_numeric($nb)) {
-            return 1;
+    public function validateName($field){
+        if (is_string($field) && (preg_match($this->patternAutorized , $field)) !== 1) {
+            header($this->pageOfReservation);
         }
-        else if ($nb<1 || $nb>21) {
-            header('Location: ../reservation.php');
-        }
-        else{
-            return $nb;
+    }
+    public function validateNameOfCompany($field){
+        if (is_string($field) && (preg_match($this->patternForCompany , $field)) !== 1) {
+            header($this->pageOfReservation);
         }
     }
 
-    /*---- validate prices-----*/
-    public function validatePrice(string $price, array $allPrices):string
-    {
-        if (in_array($price, $allPrices)) {
-            return array_search($price, $allPrices);
-        }else{
-            header('Location: ../reservation.php');
+    public function validateEmail($field){
+        if (filter_var($field, FILTER_VALIDATE_EMAIL) === false) {
+            header($this->pageOfReservation);
+        }
+        
+    }
+    public function validatingPhone($field){
+        $valid_number = filter_var($field, FILTER_SANITIZE_NUMBER_INT);
+        $valid_number = str_replace("-", "", $valid_number);
+        if (strlen($valid_number) < 10 || strlen($valid_number) > 14) {
+            header($this->pageOfReservation);
         }
     }
-
+    public function cp($field){
+        if  (preg_match($this->patternForCP, $field) !== 1) {
+            header($this->pageOfReservation);
+        }
+    }
 }
-?>

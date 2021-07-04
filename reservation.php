@@ -2,7 +2,7 @@
 <main class="reservation">
     <h2 class="titleA">Bulletin de pré-inscription - Colloque AFFECT 2021</h2>
     <div class="container-fluid">
-        <form id="payment-form" action="./controllers/recap.php" method="post">
+        <form id="payment-form" action="recap.php" method="post">
             <div class="civilite row g-3">
                 <div class="form-check col-md-1">
                     <input class="form-check-input" type="radio" name="civilite" id="mme" value="mme" checked>
