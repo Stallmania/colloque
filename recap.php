@@ -1,7 +1,13 @@
 <?php
 require_once 'header.php';
 require_once 'controllers/recap.php';
+$allPostAndTotal = [$civility,$lastName,$firstName,$situation,$raisons,$nbPartic,$email,$tel,$adress,$city,$cp,$price,$optionnel,$areaone,$total];
+
+$_SESSION['data'] = $allPostAndTotal;
+
+var_dump($_SESSION);    
 ?>
+
 
 <div class="recap">
 recaputulatif :
@@ -19,7 +25,7 @@ recaputulatif :
 </ul>
 </div>
 
-    <form action="" method="post" id="payment-form">
+    <form action="controllers\charge.php" method="post" id="payment-form">
     <h2>payer : <?=$total?></h2>
         <div class="form-row">
             <div id="card-element" class="form-control">
@@ -33,7 +39,6 @@ recaputulatif :
         <!-- <button>Submit Payment</button> -->
         <button>Submit Payment</button>
     </form>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="./src/js/charge.js"></script>

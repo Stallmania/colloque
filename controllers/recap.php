@@ -1,7 +1,8 @@
 <?php
+session_start();
+require_once './config/config.php';
 require_once 'validateForm.php';
 require_once 'validateLogic.php';
-require_once 'config/config.php';
 
 if (isset($_POST['send'])) {
     $civility = (isset($_POST['civilite'])?($_POST['civilite']):null);
@@ -17,19 +18,20 @@ if (isset($_POST['send'])) {
     $cp = ($_POST['cp']);
     $price = (isset($_POST['price'])?($_POST['price']):null);
     $optionnel = (isset($_POST['optionnel'])?($_POST['optionnel']):null);
+    $areaone = (isset($_POST['areaone'])?($_POST['areaone']):null);
+    $areatwo = (isset($_POST['areatwo'])?($_POST['areatwo']):null);
 }
 else{
-    header('Location: reservation.php');
+    header('Location: ../reservation.php');
 }
-$allPosts = [$civility,$lastName,$firstName,$situation,$raisons,$nbPartic,$email,$tel,$adress,$city,$cp,$price,$optionnel];
 /********************************************************** */
 /*------consistency between civility and input fields---*/
 if (isset($_POST['send'])){
     if (($lastName || $firstName || $situation) && ($civility === 'raison')){
-        header('Location: reservation.php');
+        header('Location: ../reservation.php');
     }
     if (($raisons || $nbPartic) && (($civility === 'mme'|| $civility === 'monsieur'))){
-        header('Location: reservation.php');
+        header('Location: ../reservation.php');
     }
 }
 
@@ -54,7 +56,6 @@ $valid->validatingNomberOfChar($nbPartic,1,2);
 $valid->validatingNomberOfChar($email,5,100);
 $valid->validateEmail($email);
 
-$valid->validatingNomberOfChar($tel,10,14);
 $valid->validatingPhone($tel);
 
 $valid->validatingNomberOfChar($adress,3,100);
@@ -67,7 +68,7 @@ $valid->validatingNomberOfChar($cp,5,5);
 $valid->cp($cp);
 
 
-/********************************************************** */
+/******************************************************* */
 /*--------ensure that required fields are filled-----*/
 $logic = new validateLogic();
 $logic->requiredRadio($civility, $civilities);
@@ -106,6 +107,9 @@ if (!empty($optionnel)) {
 /**********************************/
 /******* sum ************* */
 $total = $nbParticipants * ($price + array_sum($optionnel));
+return $total;
+
+
 
 
 

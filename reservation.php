@@ -27,50 +27,58 @@
                 <div class="col-md-12 blocks">
                     <div id="BlockPhysique" class="row g-3">
                         <div class="form-floating col-md-4">
-                            <input type="text" class="form-control" id="prenom" name="prenom" minlength="2" maxlength="50" placeholder="Prénom *" >
+                            <input type="text" class="form-control" id="prenom" name="prenom" minlength="2" maxlength="50" placeholder="Prénom *" required>
+                            <small></small>
                             <label for="prenom" class="form-label">Prénom *</label>
                         </div>
                         <div class="form-floating col-md-4">
-                            <input type="text" class="form-control" id="nom" name="nom" minlength="1" maxlength="50" placeholder="Nom *" >
+                            <input type="text" class="form-control" id="nom" name="nom" minlength="1" maxlength="50" placeholder="Nom *" required>
+                            <small></small>
                             <label for="nom" class="form-label">Nom *</label>
                         </div>
                         <div class="form-floating col-md-4" style="overflow:hidden;">
-                            <input type="text" class="form-control" id="situation" name="situation" minlength="2" maxlength="100" placeholder="Situation Professionnelle *"  >
+                            <input type="text" class="form-control" id="situation" name="situation" minlength="2" maxlength="100" placeholder="Situation Professionnelle *" required>
+                            <small></small>
                             <label for="situation" class="form-label"><span style="white-space: nowrap;">Situation Professionnelle *</span></label>
                         </div>
                     </div>
                     <div id="BlockMoral" class="row g-3">
                         <div class="form-floating col-md-8">
-                            <input type="text" class="form-control" id="raisons" name="raisons" minlength="1" maxlength="100" placeholder="entreprise, association..." >
+                            <input type="text" class="form-control" id="raisons" name="raisons" minlength="1" maxlength="100" placeholder="entreprise, association..." required>
+                            <small></small>
                             <label for="raisons" class="form-label">entreprise, association...*</label>
-                            <span id="more" style="background-color : red;"></span>
                         </div>
                         <div class="form-floating col-md-4" style="overflow:hidden;">
                             <input type="number" class="form-control" id="nbPartic" name="nbPartic" minlength="1" maxlength="2" value="1" >
-                            <label for="nbPartic" class="form-label"><span style="white-space: nowrap;">Nombre de personnes à inscrire *</span></label>
+                            <small id="more" style="white-space: nowrap;color:white;background-color:red;"></small>
+                            <label for="nbPartic" class="form-label">Nombre de personnes à inscrire *</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="row g-3 adress">
                         <div class="form-floating col-md-6">
-                            <input type="email" class="form-control" id="email" name="email" minlength="5" maxlength="50"  aria-describedby="inputGroupPrepend2" placeholder="Email *" >
+                            <input type="email" class="form-control" id="email" name="email" minlength="5" maxlength="50"  aria-describedby="inputGroupPrepend2" placeholder="Email *" required>
                             <label for="email" class="form-label">Email *</label>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control" id="tel" name="tel" minlength="10" maxlength="14"  aria-describedby="inputGroupPrepend2" placeholder="Numéro de Téléphone *" >
+                            <input type="tel" class="form-control" id="tel" name="tel" minlength="10" maxlength="14"  aria-describedby="inputGroupPrepend2" placeholder="Numéro de Téléphone *" required>
+                            <small></small>
                             <label for="tel" class="form-label">Numéro de Téléphone *</label>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control" id="adress" name="adress" minlength="3" maxlength="100" placeholder="Adresse" >
+                            <input type="text" class="form-control" id="adress" name="adress" minlength="3" maxlength="100" placeholder="Adresse *" required>
+                            <small></small>
                             <label for="adress" class="form-label">Adresse *</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" class="form-control" id="city" name="ville" minlength="2" maxlength="60" placeholder="Ville" >
+                            <input type="text" class="form-control" id="city" name="ville" minlength="2" maxlength="60" placeholder="Ville *" required>
+                            <small></small>
                             <label for="city" class="form-label">Ville *</label>
                         </div>
                         <div class="form-floating col-md-3">
-                            <input type="text" class="form-control" id="cp" name="cp" minlength="5" maxlength="5" placeholder="Code postal" >
+                            <input type="text" class="form-control" id="cp" name="cp" minlength="5" maxlength="5" placeholder="Code postal *" required>
+                            <small></small>
                             <label for="cp" class="form-label">Code postal *</label>
                         </div>
                     </div>
@@ -141,12 +149,12 @@
                 <div class="other row g-3">
                     <div class="mb-3">
                         <label for="infoA">Information complémentaire que vous souhaitez porter à notre connaissance :</label>
-                        <textarea class="form-control" id="infoA" name="informationCompl" rows="6"></textarea>
+                        <textarea class="form-control" id="infoA" name="areaone" rows="6"></textarea>
                     </div>
                     <hr>
                     <div class="mb-3">
                         <label for="infoB">Afin d’enrichir la réflexion globale engagée, n’hésitez pas à nous adresser vos questions sur ce formulaire ou par mail : celles-ci seront traitées anonymement à la tribune par l’intervenant concerné par le sujet.</label>
-                        <textarea class="form-control" id="infoB" name="forTribune" rows="6"></textarea>
+                        <textarea class="form-control" id="infoB" name="areatwo" rows="6"></textarea>
                     </div>
                 </div>
             </div>
@@ -170,5 +178,6 @@
     <script src="src/js/toggle.js"></script>
     <script src="./src/js/swi_bis.js"></script>
     <script src="./src/js/sum.js"></script>
+    <script src="./src/js/formValidate.js"></script>
 </body>
 </html>

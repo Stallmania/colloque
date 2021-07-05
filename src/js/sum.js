@@ -24,7 +24,7 @@ $("#payment-form").change(function() {
                     $("#more").html(" Merci de saisir un nombre entre 1 et 20")
                     numberPartici = 1
                 }else{
-                    $("#more").html("<span></span>")
+                    $("#more").html("<small></small>")
                     numberPartici + 0
                 }
             })
