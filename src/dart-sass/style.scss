@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import 'video';
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import 'var';
+//@import 'video';
 @import 'navigation';
-@import 'header';
-@import 'main';
+@import 'all';
+
+@import 'showcase';
+//@import 'header';
+@import 'main-one';
+@import 'main-two';
 @import 'reservation';
 /* @import 'inscription'; */

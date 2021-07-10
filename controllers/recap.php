@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once './config/config.php';
-require_once 'validateForm.php';
-require_once 'validateLogic.php';
+require_once __DIR__.'/../config/config.php'; //'config/config.php';
+require_once __DIR__.'/validateForm.php'; //'validateForm.php';
+require_once __DIR__.'/validateLogic.php'; //'validateLogic.php';
 
 if (isset($_POST['send'])) {
     $civility = (isset($_POST['civilite'])?($_POST['civilite']):null);
@@ -86,7 +86,7 @@ if ($civility === 'raison') {
     $logic->fieldNotEmpty($requiredFielsLegal);
 }
 
-$nbParticipants =  $logic->numberOfparticipants($nbPartic);
+$nbPartic =  $logic->numberOfparticipants($nbPartic);
 
 /********************************************************** */
 /********** validate and return the required price ****************** */
@@ -94,20 +94,22 @@ $require_choise = $logic->validatePrice($price, $required_prices);
 
 
 /********************************************************** */
-/*----  validate and return liste of optional choises -----*/
+/*----  validate, return liste of optional choises and calculate the sum -----*/
 if (!empty($optionnel)) {
     $optionnel_choisis = [];
     foreach($optionnel as $option){
         $optionnel_choisis[] = $logic->validatePrice($option, $optional_prices);
     }
+    $total = $nbPartic * ($price + array_sum($optionnel));
 }else{
-    $optionnel = [0];
+    $total = $nbPartic * $price ;
 }
 
-/**********************************/
-/******* sum ************* */
-$total = $nbParticipants * ($price + array_sum($optionnel));
-return $total;
+
+
+
+
+
 
 
 

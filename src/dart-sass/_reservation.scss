@@ -7,7 +7,7 @@
         margin: 30px 0 ;
     }
     .civilite{
-        background: linear-gradient(45deg,#63AA8D , #13B7D3, #1D71B8, #A25DA2 );
+        background: $lin-grad;
         border-radius: 5px;
         padding-left: 15px;
         padding-bottom: 15px;
@@ -15,19 +15,19 @@
     }
     
     .info{
-        background: linear-gradient(45deg,#63AA8D , #13B7D3, #1D71B8, #A25DA2 );
+        background: $lin-grad;
         border-radius: 5px;
     }
     
     .procucts{
-        background: linear-gradient(45deg,#63AA8D , #13B7D3, #1D71B8, #A25DA2 );
+        background: $lin-grad;
         border-radius: 5px;
         padding-left: 15px;
         padding-bottom: 15px;
         color: white;
     }
     .other{
-        background: linear-gradient(45deg,#63AA8D , #13B7D3, #1D71B8, #A25DA2 );
+        background: $lin-grad;
         border-radius: 5px;
         color: white;
         padding-bottom: 15px;
@@ -36,7 +36,7 @@
         padding-bottom: 15px;
     }
     .sum{
-        background: linear-gradient(45deg,#63AA8D , #13B7D3, #1D71B8, #A25DA2 );
+        background: $lin-grad;
         border-radius: 5px;
         color: white;
         margin: 20px;

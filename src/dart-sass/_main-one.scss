@@ -1,0 +1,18 @@
+.main-one{
+    padding-top: 30px;
+    font-size: large;
+    background:$lin-grad;
+    p{
+        color: $blanc;
+        font-size: 1.3rem;
+        text-align: justify;
+        padding: 30px;
+    }
+    img{
+        max-width: 300px;
+        float: left;
+        padding-right: 30px;
+        border-radius: 5%;
+    }
+
+}

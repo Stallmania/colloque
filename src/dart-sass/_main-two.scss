@@ -1,0 +1,15 @@
+.main-two{
+    margin: 100px;
+    padding: 10px;
+    border-radius: 1%;
+    background: $lin-grad;
+    color: $blanc;
+    font-family: $typoText;
+    
+    h2, h3{
+        text-align: center;
+    }
+}
+.closedList{
+    display: none;
+}

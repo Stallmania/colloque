@@ -7,7 +7,7 @@ main{
             text-align: justify;
             font-size: 1.3rem;
             background-color:rgb(245,245,245);
-            font-family: Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: $typoText;
         }
         img{
             max-width: 50%;

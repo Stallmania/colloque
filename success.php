@@ -16,7 +16,7 @@
         </div>
     </div>
     <div  style="text-align: center;">
-        <a href="index.html">Page d'accueil</a>
+        <a href="index.php">Page d'accueil</a>
     </div>
 </div>
 </body>

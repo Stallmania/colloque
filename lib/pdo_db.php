@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/../config/db.php'; //'../config/db.php';
 	/* 
    *  PDO DATABASE CLASS
    *  Connects Database Using PDO

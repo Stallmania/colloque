@@ -1,4 +1,4 @@
-<?php require_once 'header.php' ?>
+<?php require_once 'navbar.php' ?>
 <main class="reservation">
     <h2 class="titleA">Bulletin de pré-inscription - Colloque AFFECT 2021</h2>
     <div class="container-fluid">
@@ -164,7 +164,7 @@
                 <span class="badge bg-info"> €</span>
             </h1>
             <div class="d-grid col-md-3 mx-auto">
-                <button type="submit" class="btn btn-primary" name="send">passer au paiement</button>
+                <button type="submit" class="btn btn-primary" name="send">Valider</button>
             </div>
         </form>
     </div>
@@ -174,7 +174,7 @@
 </footer>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="src/js/countDown.js"></script>
+
     <script src="src/js/toggle.js"></script>
     <script src="./src/js/swi_bis.js"></script>
     <script src="./src/js/sum.js"></script>
