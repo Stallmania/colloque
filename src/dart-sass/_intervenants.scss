@@ -1,0 +1,24 @@
+.AffectParag{
+    color:$blanc;
+    font-family: $typoText;
+    background: $Bleu;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 16px 0;
+}
+.styleAffect{
+    background-color: $Bleu;
+    color:$blanc;
+    border-radius: 5px;
+    font-family: $typoText;
+}
+.radi{
+    max-width: 200px;
+    .imageCercle{
+        margin: 10px;
+        clip-path: circle(50%);
+    }
+}
+.padd{
+    padding-left: 100px;
+}

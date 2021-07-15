@@ -1,0 +1,21 @@
+.allRecap{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $Bleu;
+    .recap{
+        margin: 10px 0;
+        color: $blanc;
+        padding: 10px;
+        min-width: 50%;
+    }
+    .payment{
+        color: $blanc;
+        background-color: $Bleu;
+        min-width: 50%;
+    }
+}
+.space{
+    position:absolute; bottom:0; left:0; right:0; height:255;
+}

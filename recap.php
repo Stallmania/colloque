@@ -9,36 +9,44 @@ if ($total == 0) {
     header('Location: recapz.php');
 }
 ?>
-<div class="container">
-recaputulatif :
-    <p>Nombre de participant(s) :<?=$nbPartic?> </p>
-    <ul>
-        <li><?=$require_choise?></li>
-        <?php if (!empty($optionnel_choisis)):?>
-            <?php foreach ($optionnel_choisis as $op): ?>
-                <li><?=$op?></li>
-            <?php endforeach ?>
-        <?php else: ?>
-            <li>(sans options)</li>
-        <?php endif ?>
-    </ul>
+<div class="container allRecap">
+    <div class="recap">
+        <h4>Votre récapitulatif:</h4>
+        <p>Nombre de participant(s) :<?=$nbPartic?> </p>
+        <ul>
+            <li><?=$require_choise?></li>
+            <?php if (!empty($optionnel_choisis)):?>
+                <?php foreach ($optionnel_choisis as $op): ?>
+                    <li><?=$op?></li>
+                <?php endforeach ?>
+            <?php else: ?>
+                <li>(sans options)</li>
+            <?php endif ?>
+        </ul>
+    </div>
+    <div class="payment">
+        <form action="controllers\charge.php" method="post" id="payment-form">
+            <h2>Payer : <?=$total?> €</h2>
+            <div class="form-row">
+                <div id="card-element" class="form-control">
+                        <!-- a Stripe Element will be inserted here. -->
+                </div>
+                    
+                <div id="card-errors" role="alert">
+                        <!-- Used to display form errors -->
+                </div>
+            </div>
+            <!-- <button>Submit Payment</button> -->
+            <button>Payer</button>
+        </form>
+    </div>
 </div>
-<div>
-    <form action="controllers\charge.php" method="post" id="payment-form">
-    <h2>payer : <?=$total?></h2>
-        <div class="form-row">
-            <div id="card-element" class="form-control">
-                    <!-- a Stripe Element will be inserted here. -->
-            </div>
-                
-            <div id="card-errors" role="alert">
-                    <!-- Used to display form errors -->
-            </div>
-        </div>
-        <!-- <button>Submit Payment</button> -->
-        <button>Submit Payment</button>
-    </form>
-<div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="./src/js/charge.js"></script>
+<div class="space"></div>
+
+<div class="space"><?php require_once __DIR__.'/footer.php' ?></div>
+</body>
+</html>
+

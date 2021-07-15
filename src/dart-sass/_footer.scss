@@ -1,0 +1,57 @@
+.partOne{
+    padding: 30px 30px 1px 30px;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $Bleu;
+    font-family: $typoText;
+    font-size: 23px;
+    .footerleft{
+        img{
+            max-width: 300px;
+        }
+    }
+    .footermiddel{
+        ul{
+            list-style: none;
+            font-size: 20px;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $Bleu;
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .footerright{
+        ul{
+            text-decoration: none;
+            font-size: 20px;
+            list-style-type: none;
+        }
+    }
+}
+.partTwo{
+    hr{
+        color: $Bleu;
+    }
+    .last{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        p{
+            color: $Bleu;
+        }
+        a{
+            text-decoration: none;
+            color: $Bleu;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,10 +1,17 @@
-@mixin CallToAction ($bg, $padding:1rem , $bradius:25px, $border: 2px solid white, $color:red, $fz: 1rem,$border:solid 1px blue,$fw:600) {
-    background-color: $bg;
-    padding: $padding;
-    border-radius: $bradius;
-    border:$border;
-    color: $color;
-    font-size: $fz;
-    font-weight: $fw;
+.callto{
+    text-align: center;
+    background-color: #0072bc;
+    margin-right: 20px;
+    padding:14px;
+    border-radius: 25px;
+    border:1px solid white;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
+    font-family:$typoText;
+    &:hover{
+        background-color: #0063a3;
+        color: white;
+    }
 }

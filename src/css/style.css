@@ -1,10 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Roboto&display=swap");
+.callto, .showcase header .titlesAndTime .callToAction .callToActionRegister, .showcase header .titlesAndTime .callToAction .callToActionRead {
+  text-align: center;
+  background-color: #0072bc;
+  margin-right: 20px;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+
+.callto:hover, .showcase header .titlesAndTime .callToAction .callToActionRegister:hover, .showcase header .titlesAndTime .callToAction .callToActionRead:hover {
+  background-color: #0063a3;
+  color: white;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   min-width: 100%;
-  background-color: rgba(158, 151, 151, 0.4);
+  background-color: #13B7D3;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-size: 1rem;
   text-transform: uppercase;
@@ -21,33 +40,140 @@ nav .left img {
   width: 300px;
 }
 
+nav .smalImage {
+  display: none;
+}
+
 nav .right {
   z-index: 15;
   padding-right: 3%;
 }
 
-nav .right .nav_links {
+nav .right .navLinks {
   list-style: none;
 }
 
-nav .right .nav_links li {
+nav .right .navLinks li {
   display: inline-block;
   padding: 0 20px;
 }
 
-nav .right .nav_links li a {
+nav .right .navLinks li a {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-nav .right .nav_links li a:hover {
+nav .right .navLinks li a:hover {
   text-decoration: underline;
 }
 
 nav:hover {
-  background-color: rgba(158, 151, 151, 0.7);
+  background-color: #1D71B8;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   z-index: 15;
+}
+
+@media only screen and (min-width: 1025px) {
+  .navLinksBis {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 22;
+  }
+  nav .navLinks {
+    display: none;
+  }
+  nav .burger {
+    z-index: 20;
+    display: inline-block;
+    margin-right: 10%;
+    position: relative;
+    height: 30px;
+  }
+  nav .burger span {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #FFFFFF;
+    top: 50%;
+    transform: translateY(140%);
+  }
+  nav .burger span::before, nav .burger span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #FFFFFF;
+  }
+  nav .burger span::before {
+    transform: translateY(-14px);
+  }
+  nav .burger span::after {
+    transform: translateY(14px);
+  }
+  .mediaQ {
+    display: block;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .mediaNav {
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .7s ease;
+    list-style: none;
+  }
+  .mediaNav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .mediaNav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+  }
+  .rectangle {
+    display: block;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .5s ease;
+  }
+  .openRectangle {
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .5s ease;
+    z-index: 16;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #63AA8D, #13B7D3, #1D71B8, #A25DA2);
+    opacity: 0.85;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav .left {
+    display: none;
+  }
+  nav .left img {
+    display: none;
+  }
+  nav .smalImage {
+    display: block;
+    margin-left: 5%;
+  }
 }
 
 .allspace {
@@ -190,35 +316,11 @@ nav:hover {
 }
 
 .showcase header .titlesAndTime .callToAction {
-  display: block;
   margin-top: 60px;
-  text-align: center;
-}
-
-.showcase header .titlesAndTime .callToAction .callToActionRegister {
-  background-color: #0072bc;
-  margin-right: 20px;
-  padding: 14px;
-  border-radius: 25px;
-  border: 1px solid white;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.showcase header .titlesAndTime .callToAction .callToActionRegister:hover {
-  background-color: #0063a3;
 }
 
 .showcase header .titlesAndTime .callToAction .callToActionRead {
-  padding: 14px;
-  border-radius: 25px;
-  border: 1px solid white;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
+  background-color: transparent;
 }
 
 .showcase header .titlesAndTime .callToAction .callToActionRead:hover {
@@ -226,13 +328,19 @@ nav:hover {
   background-color: #ffffff;
 }
 
+@media only screen and (max-width: 700px) {
+  header {
+    font-weight: 400;
+  }
+}
+
 .main-one {
   padding-top: 30px;
   font-size: large;
-  background: linear-gradient(45deg, #63AA8D, #13B7D3, #1D71B8, #A25DA2);
+  background: #13B7D3;
 }
 
-.main-one p {
+.main-one .presentation {
   color: #FFFFFF;
   font-size: 1.3rem;
   text-align: justify;
@@ -248,13 +356,17 @@ nav:hover {
 .main-two {
   margin: 10px;
   padding: 10px;
-  background: linear-gradient(45deg, #63AA8D, #13B7D3, #1D71B8, #A25DA2);
+  background: #1D71B8;
   color: #FFFFFF;
   font-family: "Roboto";
 }
 
 .main-two #programme {
   text-align: center;
+}
+
+.main-two h2 {
+  padding-left: 10px;
 }
 
 .main-two .accordion {
@@ -299,7 +411,7 @@ nav:hover {
   opacity: 0;
   font-size: 0.875em;
   transition: all 0.25s ease-in-out;
-  box-shadow: inset 0 -1px 0 #555;
+  box-shadow: inset 0 -1px 0 white;
 }
 
 .main-two .accordion .sub > li:hover {
@@ -312,6 +424,47 @@ nav:hover {
   height: 100%;
   opacity: 1;
   background: #1D71B8;
+}
+
+.main-three {
+  background-color: #13B7D3;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  align-items: center;
+}
+
+.main-three p {
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 881px) {
+  .main-three {
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+  .main-three p {
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main-three {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+  .main-three p {
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 30px;
+  }
 }
 
 .reservation {
@@ -362,6 +515,153 @@ nav:hover {
   border-radius: 5px;
   color: white;
   margin: 20px;
+}
+
+.AffectParag {
+  color: #FFFFFF;
+  font-family: "Roboto";
+  background: #13B7D3;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 16px 0;
+}
+
+.styleAffect {
+  background-color: #13B7D3;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-family: "Roboto";
+}
+
+.radi {
+  max-width: 200px;
+}
+
+.radi .imageCercle {
+  margin: 10px;
+  clip-path: circle(50%);
+}
+
+.padd {
+  padding-left: 100px;
+}
+
+.cgvHeader {
+  margin: 10px 10%;
+  background-color: #13B7D3;
+  border-radius: 2px;
+  font-family: "Roboto";
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.cgvHeader h2 {
+  font-family: "Montserrat";
+}
+
+.cgvbody {
+  margin: 10px 10%;
+  background-color: #13B7D3;
+  border-radius: 2px;
+  font-family: "Roboto";
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.cgvbody h3 {
+  font-family: "Montserrat";
+}
+
+.msg {
+  color: #13B7D3;
+  text-align: center;
+}
+
+.allRecap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #13B7D3;
+}
+
+.allRecap .recap {
+  margin: 10px 0;
+  color: #FFFFFF;
+  padding: 10px;
+  min-width: 50%;
+}
+
+.allRecap .payment {
+  color: #FFFFFF;
+  background-color: #13B7D3;
+  min-width: 50%;
+}
+
+.space {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 255;
+}
+
+.partOne {
+  padding: 30px 30px 1px 30px;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #13B7D3;
+  font-family: "Roboto";
+  font-size: 23px;
+}
+
+.partOne .footerleft img {
+  max-width: 300px;
+}
+
+.partOne .footermiddel ul {
+  list-style: none;
+  font-size: 20px;
+}
+
+.partOne .footermiddel ul li a {
+  text-decoration: none;
+  color: #13B7D3;
+}
+
+.partOne .footermiddel ul li:hover {
+  text-decoration: underline;
+}
+
+.partOne .footerright ul {
+  text-decoration: none;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.partTwo hr {
+  color: #13B7D3;
+}
+
+.partTwo .last {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.partTwo .last p {
+  color: #13B7D3;
+}
+
+.partTwo .last a {
+  text-decoration: none;
+  color: #13B7D3;
+}
+
+.partTwo .last a:hover {
+  text-decoration: underline;
 }
 
 /* @import 'inscription'; */

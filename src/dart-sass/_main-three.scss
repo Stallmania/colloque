@@ -1,0 +1,37 @@
+.main-three{
+    background-color: $Bleu;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    align-items: center;
+    p{
+        color: $blanc;
+        font-family: $typoText;
+        font-size: 40px;
+    }
+}
+@media #{$medium-down} {
+    .main-three{
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        p{
+            color: $blanc;
+            font-family: $typoText;
+            font-size: 30px;
+        }
+    }
+}
+@media #{$small-down} {
+    .main-three{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        p{
+            color: $blanc;
+            font-family: $typoText;
+            font-size: 30px;
+        }
+    }
+}

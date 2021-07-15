@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>affect</title>
 </head>
 <body>
-<div class="card">
-    <div class="card-content">
-        <img src="src/images/logo_5.png" alt="logo">
-        <div class="content">
-            <h2 style="text-align: center;">paiement accepter</h2>
-        </div>
-    </div>
-    <div  style="text-align: center;">
-        <a href="index.php">Page d'accueil</a>
+<div class="card" style="width: 40rem; margin:10px auto;">
+    <img src="src/images/Affect-Association-Logo-Color.jpg" class="card-img-top" alt="logo">
+    <div class="card-body">
+        <h5 class="card-title">Paiement accepter</h5>
+        <p class="card-text">Votre commande a bien été prise en compte, vous recevrez un émail de confirmation.</p>
+        <a href="index.php" class="btn btn-primary">Page d'accueil</a>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

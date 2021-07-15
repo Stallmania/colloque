@@ -16,12 +16,8 @@
         <div class="left">
             <a href="index.php"><img src="src/images/logo_5.png" alt="logo"></a>
         </div>
-        <div class="smalImage">
-            <a href="index.php"><img src="src/images/logo6.jpg" alt="logo"></a>
-        </div>
-        <div class="right burger">
-            <span></span>
-            <ul class="navLinks">
+        <div class="right">
+            <ul class="nav_links">
                 <li><a href="reservation.php">Reservation</a></li>
                 <li><a href="intervenants.php">Intervenants</a></li>
                 <li><a href="colloques.php">Colloques</a></li>
@@ -29,16 +25,8 @@
             </ul>
         </div>
     </nav>
-    <div class="mediaQ">
-        <ul class="navLinksBis">
-            <li><a href="index.php">Page d'accueil</a></li>
-            <li><a href="reservation.php">Reservation</a></li>
-            <li><a href="intervenants.php">Intervenants</a></li>
-            <li><a href="colloques.php">Colloques</a></li>
-            <li><a href="nous-contacter.php">Nous-Contacter</a></li>
-        </ul>
+    <div class="burger">
+        <span></span>
     </div>
-    <div class="rectangle">
-        
-    </div>
+    <div class="closed-cercle"></div>
     <div class="bottom-border"></div>

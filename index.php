@@ -1,35 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/style.css">
 
-    <title>Colloque 2021</title>
-</head>
-<body>
-    <nav>
-        <div class="left">
-            <a href="index.php"><img src="src/images/logo_5.png" alt="logo"></a>
-        </div>
-        <div class="right">
-            <ul class="nav_links">
-                <li><a href="reservation.php">Reservation</a></li>
-                <li><a href="colloques.php">Colloques</a></li>
-                <li><a href="intervenants.php">Intervenants</a></li>
-                <li><a href="nous-contacter.php">Nous-Contacter</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="burger">
-        <span></span>
-    </div>
-    <div class="closed-cercle"></div>
-    <div class="bottom-border"></div>
-    
+    <?php require_once 'navbar.php' ?>
     <div class="withoutn">
     </div>
     <section class="allspace">
@@ -60,7 +30,7 @@
                         </tr>
                     </table>
                     <div class="callToAction">
-                        <a href="reservation.php" class="callToActionRegister">Réserver Maintenant</a>
+                        <a href="reservation.php" class="callto">Réserver Maintenant</a>
                         <a href="#two" class="callToActionRead">En savoir plus</a>
                     </div>
                 </div>
@@ -69,13 +39,12 @@
     </section>
     
     <section class="main-one">
-        <div class="presentation-one">
+        <div class="presentation">
             <p><img src="src/images/Affect-Association-Logo-Application-Color.jpg" alt="image-logo"><strong>L’Affect</strong>, association créée en 1998, se trouve aux origines des réflexions sur la nécessaire formation des mandataires judiciaires et de la professionnalisation du métier. La création de l’association découle d’une réflexion sur le manque de formation des tuteurs et curateurs.
             
-
-            En 1998, un groupe de travail s’est réuni à Arcachon autour de cette problématique. Depuis 2009, le colloque annuel de l’Affect rassemble les experts du domaine, qu’ils soient juristes, mandataires, psychologues, médecins, politiques, magistrats, philosophes… Les conférenciers sont aussi bien chercheurs et universitaires d’une part, que praticiens des mesures de protection des majeurs d’autre part. Entre analyse théorique et approche pratique, le Colloque offre une large réflexion sur le métier de MJPM. Ces aller-retours entre pratiques professionnelles et normes juridiques, sociales et éthiques se trouvent au cœur même de l’activité de protection.
+            <p> En 1998, un groupe de travail s’est réuni à Arcachon autour de cette problématique. Depuis 2009, le colloque annuel de l’Affect rassemble les experts du domaine, qu’ils soient juristes, mandataires, psychologues, médecins, politiques, magistrats, philosophes… Les conférenciers sont aussi bien chercheurs et universitaires d’une part, que praticiens des mesures de protection des majeurs d’autre part. Entre analyse théorique et approche pratique, le Colloque offre une large réflexion sur le métier de MJPM. Ces aller-retours entre pratiques professionnelles et normes juridiques, sociales et éthiques se trouvent au cœur même de l’activité de protection.</p>
             
-            Ce grand colloque, singulier et pluriel, un et divers, tout à la fois, questionne la nature et la pratique du mandat de protection. Cet événement majeur forme le moment incontournable de l’année, permettant de mieux appréhender la spécificité et l’actualité des régimes de protection.</p>
+            <p>Ce grand colloque, singulier et pluriel, un et divers, tout à la fois, questionne la nature et la pratique du mandat de protection. Cet événement majeur forme le moment incontournable de l’année, permettant de mieux appréhender la spécificité et l’actualité des régimes de protection.</p>
         </div>
     </section>
 
@@ -87,7 +56,7 @@
                 <input id="menu1" type="checkbox" name="menu"/>
                 <ul class="sub">
                     <li>
-                        Georges DECOCQ:Président d'Affect
+                        Georges DECOCQ : Président d'Affect
                     </li>
                 </ul>
             </li>
@@ -96,7 +65,7 @@
                 <input id="menu2" type="checkbox" name="menu"/>
                 <ul class="sub">
                     <li>
-                        Éric FIAT:Professeur à l'Université de PARIS-EST Marne la Vallée
+                        Éric FIAT : Professeur à l'Université de PARIS-EST Marne la Vallée
                     </li>
                 </ul>
             </li>
@@ -129,7 +98,7 @@
                     </li>
                     <li><h3>Éthique du MJPM, cadre de vie et relations personnelles de la personne protégée</h3>
                     <ul>
-                        <li>Sylvie MOISDON-CHATAIGNER : Maitre de conférences des Universités, HDR Présidente de l’Association pour la diffusion et la connaissance du droit dans le secteur social, médico-social et éducatif</li>
+                        <li>Sylvie MOISDON-CHATAIGNER: Maitre de conférences des Universités, HDR Présidente de l’Association pour la diffusion et la connaissance du droit dans le secteur social, médico-social et éducatif</li>
                         <li>Séverine ROY : MJPM indépendante, Présidente de la FNMJI</li>
                     </ul>
                     </li>
@@ -140,16 +109,16 @@
                 <input id="menu5" type="checkbox" name="menu"/>
                 <ul class="sub">
                     <li>
-                        <h3>Éthique du MJPM et vie familiale de la personne protégée : autorité parentale et majeur protégé en couple</h3>
+                        <h3>Éthique du MJPM et vie familiale de la personne protégée: autorité parentale et majeur protégé en couple</h3>
                         <ul>
                             <li>Annick BATTEUR : Professeur émérite, doyen honoraire de la faculté de droit de CAEN.</li>
-                            <li>Anne GOZARD : MJPM indépendante , Présidente de la Chambre Nationale des MJPM</li>
+                            <li>Anne GOZARD: MJPM indépendante , Présidente de la Chambre Nationale des MJPM</li>
                         </ul>
                     </li>
                     <li>
                         <h3>Éthique du MJPM et mesure partagée : co-mesures, mesures divisées, subrogées tutelles ou curatelles</h3>
                         <ul>
-                            <li>Gilles RAOUL CORMEIL : Professeur à l’Université de Bretagne Occidentale, responsable du Master Protection des personnes vulnérables</li>
+                            <li>Gilles RAOUL CORMEIL: Professeur à l’Université de Bretagne Occidentale, responsable du Master Protection des personnes vulnérables</li>
                             <li>Guillaume SOUTRA : MJPM indépendant</li>
                             <li>Saskia LYSSANDRE : MJPM indépendante, co-présidente de l’association des mandataires Ile de France</li>
                         </ul>
@@ -163,7 +132,7 @@
                     <li>
                         <h3>Éthique et accompagnement social</h3>
                         <ul>
-                            <li>Ange FINISTROSA : Président de la FNAT</li>
+                            <li>Ange FINISTROSA: Président de la FNAT</li>
                             <li>Paloma MARTIN LAC : MJPM indépendante</li>
                         </ul>
                     </li>
@@ -171,7 +140,7 @@
                         <h3>Éthique du MJPM et soins délivrés à la personne protégée (refus de soins, recours au juge en cas de désaccord)</h3>
                         <ul>
                             <li>Laurence GATTI : Maitre de conférences en droit privé et sciences criminelles, équipe de recherche en droit privé à l’Université de Poitiers</li>
-                            <li>Alexandre LEDEME : Directeur d’une association tutélaire</li>
+                            <li>Alexandre LEDEME: Directeur d’une association tutélaire</li>
                             <li>Véronique LEFEBVRE DES NOETTES : Psychiatre, gériatre à l’hôpitale Émile Roux à Limeil-Brévannes, enseignant à l’Université de Paris est Creteil, membre du conseil scientifique de l’Espace national d’éthique sur les maladies</li>
                             <li>Aude GAUTHIER : MJPM, membre du bureau national de l’ANDP</li>
                         </ul>
@@ -190,18 +159,20 @@
                 <input id="menu7" type="checkbox" name="menu"/>
                 <ul class="sub">
                     <li>
-                        Raymond LE GUIDEC:Professeur émérite à l'Université de NANTES
+                        Raymond LE GUIDEC : Professeur émérite à l'Université de NANTES
                     </li>
                 </ul>
             </li>
         </ul>
     </section>
+    <section class="main-three">
+        <p>N'attendez plus, inscrivez-vous !</p>
+        <div class="main-three">
+            <a href="reservation.php" class="callto">Réserver Maintenant</a>
+        </div>
+    </section>
     
-    <footer>
-        
-    </footer>
     <script src="src/js/countDown.js"></script>
-    <script src="src/js/tog_program.js"></script>
     <script src="src/js/toggle.js"></script>
-</body>
-</html>
+
+    <?php require_once 'footer.php'?>

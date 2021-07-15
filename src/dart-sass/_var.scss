@@ -12,10 +12,16 @@ $Blue-fonce :#1D71B8;
 $Violet :#A25DA2;
 $lin-grad :linear-gradient($degrade, $Vert, $Bleu, $Blue-fonce, $Violet );
 
-$medium:768px;
-$large:1000px;
+$smallest:510;
+$small:700px;
+$medium:881px;
+$large:1025px;
 
+$smallest-down:"only screen and (max-width:#{$smallest})";
+$smallest-up:"only screen and (min-width:#{$smallest})";
+$small-down:"only screen and (max-width:#{$small})";
+$small-up:"only screen and (min-width:#{$small})";
+$medium-down:"only screen and (max-width:#{$medium})";
 $medium-up:"only screen and (min-width:#{$medium})";
-$medium-down:"only screen and (min-width:#{$medium})";
+$large-down:"only screen and (max-width:#{$large})";
 $large-up:"only screen and (min-width:#{$large})";
-$large-down:"only screen and (min-width:#{$large})";
