@@ -1,4 +1,4 @@
-<!-- <footer>
+<footer>
     <div class="partOne">
         <div class="footerleft">
             <img src="src/images/Affect-Association-Logo-Color.jpg" alt="">
@@ -32,4 +32,3 @@
         </div>
     </div>
 </footer>
- -->

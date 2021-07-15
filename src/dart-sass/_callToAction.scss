@@ -15,3 +15,8 @@
         color: white;
     }
 }
+@media #{$small-down} {
+    .callto{
+        margin: 20px 0;
+    }
+}

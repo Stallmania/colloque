@@ -7,4 +7,11 @@
 .withoutn{
     min-width: 100%;
     min-height: 92vh;
-}   
+}
+
+@media #{$large-down} {
+    .withoutn {
+        min-width: 100%;
+        min-height: 79vh;
+    }
+}
