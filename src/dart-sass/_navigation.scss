@@ -44,6 +44,12 @@ nav:hover{
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     z-index: 15;
 }
+
+
+
+//////////////////////////////////////////
+////////////@Media query//////////////////////
+//////////////////////////////////////////
 ////////////////////////////////////////////////
 @media #{$large-up} {
     .navLinksBis{
@@ -109,7 +115,7 @@ nav:hover{
             flex-direction: column;
             align-items: center;
             justify-content:space-evenly;
-            gap: 40px;
+            gap: 20px;
             li{
                 a{
                     color: $blanc;
@@ -154,4 +160,61 @@ nav:hover{
             margin-left: 5%;
         }
     }
+    .openRectangle{
+        position: fixed;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1);
+        transition:transform .5s ease;
+        z-index: 16;
+        min-width: 100vw;
+        min-height: 100vh;
+        background:$lin-grad;
+        opacity: 0.85;
+    }
 }
+
+/////01------319px/////////
+@media #{$betweeneZeroAndverysmallPhon} {
+    .mediaNav{
+        ul{
+            gap: 10px;
+            li{
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    
+}
+
+/////319------510px/////////
+@media #{$betweenverysmallPhoneAndSmallPhone} {
+    .mediaNav{
+        ul{
+            gap: 10px;
+            li{
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/////510------700px/////////
+@media #{$betweenSmallPhoneAndBigPhone} {
+    .mediaNav{
+        ul{
+            gap: 10px;
+            li{
+                a{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+

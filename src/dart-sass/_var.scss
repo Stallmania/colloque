@@ -12,7 +12,9 @@ $Blue-fonce :#1D71B8;
 $Violet :#A25DA2;
 $lin-grad :linear-gradient($degrade, $Vert, $Bleu, $Blue-fonce, $Violet );
 
-$smallest:510;
+$zero:1px;
+$verysmall:319px;
+$smallest:510px;
 $small:700px;
 $medium:881px;
 $large:1025px;
@@ -25,3 +27,11 @@ $medium-down:"only screen and (max-width:#{$medium})";
 $medium-up:"only screen and (min-width:#{$medium})";
 $large-down:"only screen and (max-width:#{$large})";
 $large-up:"only screen and (min-width:#{$large})";
+
+
+
+$betweenTabAndPC:"(min-width: #{$medium}) and (max-width: #{$large})";
+$betweenBigPhoneAndTab:"(min-width: #{$small}) and (max-width: #{$medium})";
+$betweenSmallPhoneAndBigPhone:"(min-width: #{$smallest}) and (max-width: #{$small})";
+$betweenverysmallPhoneAndSmallPhone:"(min-width: #{$verysmall}) and (max-width: #{$smallest})";
+$betweeneZeroAndverysmallPhon:"(min-width: #{$zero}) and (max-width: #{$verysmall})";

@@ -13,5 +13,32 @@
         float: left;
         padding-right: 30px;
     }
-
 }
+
+/////319------510px/////////
+@media #{$betweenverysmallPhoneAndSmallPhone} {
+    .main-one{
+        padding-top:100px;
+    }
+}
+
+/////510------700px/////////
+@media #{$betweenSmallPhoneAndBigPhone} {
+    .main-one{
+        padding-top:150px;
+    }
+}
+
+/////700------881px/////////
+@media #{$betweenBigPhoneAndTab} {
+    .main-one{
+        margin-top:0;
+        padding-top:100px;
+        img{
+            max-width: 150px;
+            float: left;
+            padding-right: 15px;
+        }
+    }
+}
+

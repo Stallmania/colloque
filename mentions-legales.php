@@ -75,5 +75,6 @@ ainsi que toute présentation tendancieuse, ou contraire aux lois en vigueur.</l
 </div>
 
 <?php require_once __DIR__.'/footer.php' ?>
+<script src="src/js/toggle.js"></script>
 </body>
 </html>

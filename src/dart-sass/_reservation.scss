@@ -42,3 +42,9 @@
         margin: 20px;
     }
 }
+
+@media #{$small-down} {
+    .reservation{
+        margin:0 3%;
+    }
+}

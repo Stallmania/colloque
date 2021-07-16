@@ -136,5 +136,6 @@ AFFECT : 14 Avenue du Général Leclerc 33120 ARCACHON
     </div>
 </div>
 <?php require_once __DIR__.'/footer.php' ?>
+<script src="src/js/toggle.js"></script>
 </body>
 </html>

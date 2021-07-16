@@ -7,9 +7,12 @@
 .withoutn{
     min-width: 100%;
     min-height: 92vh;
+    padding-bottom: 60px;
+    background-color: $Bleu;
 }
 
-@media #{$large-down} {
+/////700------881px/////////
+@media #{$betweenBigPhoneAndTab} {
     .withoutn {
         min-width: 100%;
         min-height: 79vh;
