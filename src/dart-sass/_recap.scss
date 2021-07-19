@@ -19,3 +19,17 @@
 .space{
     position:absolute; bottom:0; left:0; right:0; height:255;
 }
+
+@media #{$large-down}{
+    .allRecap{
+        flex-direction: column;
+        .payment{
+            color: $blanc;
+            background-color: $Bleu;
+            min-width: 100%;
+        }
+    }
+    .space{
+        position: relative;
+    }
+}

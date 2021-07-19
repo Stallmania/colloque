@@ -1,4 +1,4 @@
-
+    <?php $titel = 'Colloque AFFECT 2021'?>
     <?php require_once 'navbar.php' ?>
     <div class="withoutn">
     </div>
@@ -11,7 +11,7 @@
                 <div class="titlesAndTime">
                     <div class="titles">
                         <span>13<sup>ème</sup> Colloque</span>
-                        <h2>2 OCTOBRE 2021 – PALAIS DES CONGRÈS, ARCACHON</h3>
+                        <h2>2 OCTOBRE 2021 – PALAIS DES CONGRÈS, ARCACHON</h2>
                         <h1 class="firstT">LES FACETTES DE L'ÉTHIQUE DU MJPM</h1>
                         <h1 class="secendT">Questionnement ou évolution entre présent et avenir</h1>
                     </div>

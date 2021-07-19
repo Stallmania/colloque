@@ -6,14 +6,14 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Paiement accepté</title>
+    <title>Paiement refusé</title>
 </head>
 <body>
 <div class="card" style="max-width: 40rem; margin:10px auto;">
     <img src="src/images/Affect-Association-Logo-Color.jpg" class="card-img-top" alt="logo">
     <div class="card-body">
-        <h5 class="card-title">Paiement accepter</h5>
-        <p class="card-text">Votre commande a bien été prise en compte, vous recevrez un émail de confirmation.</p>
+        <h5 class="card-title">Paiement refusé !</h5>
+        <p class="card-text">Un problème est survenu lors de votre paiement.</p>
         <a href="index.php" class="btn btn-primary">Page d'accueil</a>
     </div>
 </div>

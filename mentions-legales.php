@@ -1,3 +1,4 @@
+<?php $titel = 'Mentions légales - Colloque AFFECT 2021'?>
 <?php require_once __DIR__.'/navbar.php'?>
 <div class="cgvHeader">
 

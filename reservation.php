@@ -1,6 +1,7 @@
+<?php $titel = 'Réservation - Colloque AFFECT 2021'?>
 <?php require_once 'navbar.php' ?>
 <main class="reservation">
-    <h2 class="titleA">Bulletin de pré-inscription - Colloque AFFECT 2021</h2>
+    <h1 class="titleA">Bulletin de pré-inscription - Colloque AFFECT 2021</h1>
     <div class="container-fluid">
         <form id="payment-form" action="recap.php" method="post">
             <div class="civilite row g-3">

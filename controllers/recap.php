@@ -4,22 +4,27 @@ require_once __DIR__.'/../config/config.php'; //'config/config.php';
 require_once __DIR__.'/validateForm.php'; //'validateForm.php';
 require_once __DIR__.'/validateLogic.php'; //'validateLogic.php';
 
+$valid = new validateForm();
+
+/********************************************************** */
+/*-------Escape XSS----------*/
+
 if (isset($_POST['send'])) {
-    $civility = (isset($_POST['civilite'])?($_POST['civilite']):null);
-    $lastName = (isset($_POST['prenom'])?($_POST['prenom']):null);
-    $firstName = (isset($_POST['nom'])?($_POST['nom']):null);
-    $situation = (isset($_POST['situation'])?($_POST['situation']):null);
-    $raisons = (isset($_POST['raisons'])?($_POST['raisons']):null);
-    $nbPartic = (isset($_POST['nbPartic'])?($_POST['nbPartic']):null);
-    $email = ($_POST['email']);
-    $tel = ($_POST['tel']);
-    $adress = ($_POST['adress']);
-    $city = ($_POST['ville']);
-    $cp = ($_POST['cp']);
-    $price = (isset($_POST['price'])?($_POST['price']):null);
+    $civility = (isset($_POST['civilite'])?$valid->xssEscape(($_POST['civilite'])):null);
+    $lastName = (isset($_POST['prenom'])?$valid->xssEscape(($_POST['prenom'])):null);
+    $firstName = (isset($_POST['nom'])?$valid->xssEscape(($_POST['nom'])):null);
+    $situation = (isset($_POST['situation'])?$valid->xssEscape(($_POST['situation'])):null);
+    $raisons = (isset($_POST['raisons'])?$valid->xssEscape(($_POST['raisons'])):null);
+    $nbPartic = (isset($_POST['nbPartic'])?$valid->xssEscape(($_POST['nbPartic'])):null);
+    $email = $valid->xssEscape(($_POST['email']));
+    $tel = $valid->xssEscape(($_POST['tel']));
+    $adress = $valid->xssEscape(($_POST['adress']));
+    $city = $valid->xssEscape(($_POST['ville']));
+    $cp = $valid->xssEscape(($_POST['cp']));
+    $price = (isset($_POST['price'])?$valid->xssEscape(($_POST['price'])):null);
     $optionnel = (isset($_POST['optionnel'])?($_POST['optionnel']):null);
-    $areaone = (isset($_POST['areaone'])?($_POST['areaone']):null);
-    $areatwo = (isset($_POST['areatwo'])?($_POST['areatwo']):null);
+    $areaone = (isset($_POST['areaone'])?$valid->xssEscape(($_POST['areaone'])):null);
+    $areatwo = (isset($_POST['areatwo'])?$valid->xssEscape(($_POST['areatwo'])):null);
 }
 else{
     header('Location: ../reservation.php');
@@ -35,10 +40,9 @@ if (isset($_POST['send'])){
     }
 }
 
-
 /********************************************************** */
 /*-------Max and min char length authorized and validation for every field----------*/
-$valid = new validateForm();
+
 $valid->validatingNomberOfChar($lastName,2,50);
 $valid->validateName($lastName);
 

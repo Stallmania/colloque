@@ -5,6 +5,10 @@ class validateForm
     protected $patternAutorized ='#^[\p{Latin}\' -]+$#u';
     protected $patternForCompany ='#^[0-9\p{Latin}\' -.]+$#u';
     protected $patternForCP = '#^[0-9]+$#';
+
+    public function xssEscape($string){
+        return trim(htmlentities($string, ENT_QUOTES));
+    }
     
     public function validatingNomberOfChar($field,int $NbMinOfCharAutorized = 1, int $NbMaxOfCharAutorized = 50)
     {

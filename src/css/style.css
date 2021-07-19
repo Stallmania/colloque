@@ -811,6 +811,7 @@ nav:hover {
 }
 
 .reservation .titleA {
+  font-size: 25px;
   text-align: center;
   margin: 30px 0;
 }
@@ -949,6 +950,20 @@ nav:hover {
   height: 255;
 }
 
+@media only screen and (max-width: 1025px) {
+  .allRecap {
+    flex-direction: column;
+  }
+  .allRecap .payment {
+    color: #FFFFFF;
+    background-color: #13B7D3;
+    min-width: 100%;
+  }
+  .space {
+    position: relative;
+  }
+}
+
 .partOne {
   padding: 30px 30px 1px 30px;
   margin: 10px 0 0 0;
@@ -1029,7 +1044,7 @@ nav:hover {
   }
   .partTwo .last {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 30px;
   }

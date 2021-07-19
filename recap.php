@@ -1,3 +1,4 @@
+<?php $titel = 'Réservation - Colloque AFFECT 2021'?>
 <?php
 require_once __DIR__.'/navbar.php';
 require_once __DIR__.'/controllers/recap.php';   //'/controllers/recap.php';

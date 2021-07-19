@@ -1,3 +1,4 @@
+<?php $titel = 'CGV - Colloque AFFECT 2021'?>
 <?php require_once __DIR__.'/navbar.php';?>
 <div>
     <div class="cgvHeader">

@@ -1,3 +1,4 @@
+<?php $titel = 'Intervenants - Colloque AFFECT 2021'?>
 <?php require_once 'navbar.php' ?>
     <div class="container">
         <div class="AffectParag">
