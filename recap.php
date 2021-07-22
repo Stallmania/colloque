@@ -26,7 +26,7 @@ if ($total == 0) {
         </ul>
     </div>
     <div class="payment">
-        <form action="controllers\charge.php" method="post" id="payment-form">
+        <form action="controllers/charge.php" method="post" id="payment-form">
             <h2>Payer : <?=$total?> €</h2>
             <div class="form-row">
                 <div id="card-element" class="form-control">

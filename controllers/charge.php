@@ -1,19 +1,19 @@
 <?php
 session_start();
-require_once __DIR__.'/../vendor/autoload.php';//'../vendor/autoload.php';
-require_once __DIR__.'/../config/config.php'; //'../config/config.php';
-require_once __DIR__.'/../config/db.php'; //'../config/db.php';
-require_once __DIR__.'/../lib/pdo_db.php';//'../lib/pdo_db.php';
-require_once __DIR__.'/../models/Clients.php';//'../models/Clients.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../lib/pdo_db.php';
+require_once __DIR__ . '/../models/Clients.php';
 
-$civility = $_SESSION['data'][0] ;
-$lastName = $_SESSION['data'][1] ;
-$firstName = $_SESSION['data'][2] ;
-$situation = $_SESSION['data'][3] ;
-$raisons = $_SESSION['data'][4] ;
-$nbPartic = $_SESSION['data'][5] ;
-$email = $_SESSION['data'][6] ;
-$tel = $_SESSION['data'][7] ;
+$civility = $_SESSION['data'][0];
+$lastName = $_SESSION['data'][1];
+$firstName = $_SESSION['data'][2];
+$situation = $_SESSION['data'][3];
+$raisons = $_SESSION['data'][4];
+$nbPartic = $_SESSION['data'][5];
+$email = $_SESSION['data'][6];
+$tel = $_SESSION['data'][7];
 $adress = $_SESSION['data'][8];
 $city = $_SESSION['data'][9];
 $cp = $_SESSION['data'][10];
@@ -31,8 +31,8 @@ $price = array_search((int)$price, $required_prices);
 $keys = [];
 if ($optionnel !== null) {
   foreach ($optionnel as $value) {
-    $keys [] = (array_search((int)$value,$optional_prices));
-    $optionnel = implode(", ",$keys);
+    $keys[] = (array_search((int)$value, $optional_prices));
+    $optionnel = implode(", ", $keys);
   }
 }
 
@@ -88,4 +88,4 @@ $client = new Clients();
 $client->addClient($clientData);
 
 // Redirect to success
-header('Location: ../success.php?tid='.$charge->id.'&product='.$charge->description);
+header('Location: ../success.php?tid=' . $charge->id . '&product=' . $charge->description);

@@ -10,8 +10,8 @@
     <li>SIRET : 420 481 236 00032</li>
     <li>Adresse du siège : 27 av de Choisy - 75013 PARIS</li>
     <li>Adresse administrative : 14 Bld du Général Leclerc - 33120 ARCACHON</li>
-    <li>Tel. 05 56 66 92 87</li>
-    <li>émail:contact@affect-formation.com</li>
+    <li>Tel.: 05 56 66 92 87</li>
+    <li>émail: contact@affect-formation.com</li>
 </ul>
 </div>
 <div class="cgvbody">
